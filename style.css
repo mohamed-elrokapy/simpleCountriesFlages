@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh;
+  background-color: black;
+}
+
+section {
+  background-color: #231f1f;
+  height: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+button {
+  display: block;
+  height: 40%;
+  width: 15%;
+  color: white;
+  background-color:#121111;
+  font-size: 1.2em;
+  padding: 2px;
+}
+body div {
+  padding: 1em;
+  background-color: #332c2c;;
+  height: 70%;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  display: none;
+  margin-top: 2em;
+  color: white;
+  
+}
+
+.myimag {
+  margin-top: 1.5em;
+  
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  height: 70%;
+
+  /* height: 80%; */
+}
+.second{
+background-color: green;
+
+
+
+}
