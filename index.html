@@ -3,58 +3,166 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Country Flags</title>
+    <meta
+      name="description"
+      content="Seven country flags with their names in English and Arabic. Choose a country to look at one flag, or show them all."
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section>
-      <button>egypt</button>
-      <button>palestaine</button>
-      <button>lebanon</button>
-      <button>emarates</button>
-      <button>remove city</button>
-    </section>
+    <header class="masthead">
+      <div class="wrap">
+        <p class="eyebrow">Atlas plate</p>
+        <h1>Country flags</h1>
+        <p class="lede">
+          Seven flags, each with its name in English and in Arabic. Pick a
+          country to look at one flag, or show them all.
+        </p>
+      </div>
+    </header>
 
-    <div id="egypt">
-      <h1>egypt</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, optio.
-      </p>
-      <figure class="myimag">
-        <img src="img/علم-مصر-أهم-الحقائق.jpg" alt="" height="300px" />
-      </figure>
-    </div>
-    <div id="palestaine">
-      <h1>palestaine</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, optio.
-      </p>
-      <figure class="myimag">
-        <img src="img/palastine.jpg" alt="" height="300px" />
-      </figure>
-    </div>
-    <div id="lebanon">
-      <h1>lebanon</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, optio.
-      </p>
-      <figure class="myimag">
-        <img
-          src="img/علم-لبنان-ودلالة-الرموز-والألوان.jpg"
-          alt=""
-          height="300px"
-        />
-      </figure>
-    </div>
-    <div id="emarates">
-      <h1>emarates</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, optio.
-      </p>
-      <figure class="myimag">
-        <img src="img/من-صمم-علم-الامارات.jpg" alt="" height="300px" />
-      </figure>
-    </div>
+    <main class="wrap">
+      <nav id="filters" class="filters" aria-label="Choose a country" hidden>
+        <ul id="filter-list" class="filters__list"></ul>
+      </nav>
+
+      <p id="status" class="visually-hidden" role="status" aria-live="polite"></p>
+
+      <ul id="grid" class="grid">
+        <li class="card" id="egypt" data-name="Egypt">
+          <article>
+            <figure class="card__figure">
+              <img
+                src="img/egypt.jpg"
+                alt="Flag of Egypt"
+                width="710"
+                height="532"
+                loading="lazy" decoding="async"
+              />
+            </figure>
+            <header class="card__head">
+              <h2 class="card__name">Egypt</h2>
+              <p class="card__name-ar" lang="ar" dir="rtl">مصر</p>
+            </header>
+            <p class="card__desc">Horizontal red, white and black bands with a golden eagle emblem in the centre.</p>
+          </article>
+        </li>
+        <li class="card" id="palestine" data-name="Palestine">
+          <article>
+            <figure class="card__figure">
+              <img
+                src="img/palestine.jpg"
+                alt="Flag of Palestine"
+                width="660"
+                height="385"
+                loading="lazy" decoding="async"
+              />
+            </figure>
+            <header class="card__head">
+              <h2 class="card__name">Palestine</h2>
+              <p class="card__name-ar" lang="ar" dir="rtl">فلسطين</p>
+            </header>
+            <p class="card__desc">Horizontal black, white and green bands with a red triangle at the hoist.</p>
+          </article>
+        </li>
+        <li class="card" id="lebanon" data-name="Lebanon">
+          <article>
+            <figure class="card__figure">
+              <img
+                src="img/lebanon.jpg"
+                alt="Flag of Lebanon"
+                width="710"
+                height="532"
+                loading="lazy" decoding="async"
+              />
+            </figure>
+            <header class="card__head">
+              <h2 class="card__name">Lebanon</h2>
+              <p class="card__name-ar" lang="ar" dir="rtl">لبنان</p>
+            </header>
+            <p class="card__desc">Red, white and red horizontal bands with a green cedar tree in the centre.</p>
+          </article>
+        </li>
+        <li class="card" id="uae" data-name="United Arab Emirates">
+          <article>
+            <figure class="card__figure">
+              <img
+                src="img/uae.jpg"
+                alt="Flag of United Arab Emirates"
+                width="710"
+                height="532"
+                loading="lazy" decoding="async"
+              />
+            </figure>
+            <header class="card__head">
+              <h2 class="card__name">United Arab Emirates</h2>
+              <p class="card__name-ar" lang="ar" dir="rtl">الإمارات العربية المتحدة</p>
+            </header>
+            <p class="card__desc">A red vertical band at the hoist beside green, white and black horizontal bands.</p>
+          </article>
+        </li>
+        <li class="card" id="syria" data-name="Syria">
+          <article>
+            <figure class="card__figure">
+              <img
+                src="img/syria.png"
+                alt="Flag of Syria"
+                width="623"
+                height="390"
+                loading="lazy" decoding="async"
+              />
+            </figure>
+            <header class="card__head">
+              <h2 class="card__name">Syria</h2>
+              <p class="card__name-ar" lang="ar" dir="rtl">سوريا</p>
+            </header>
+            <p class="card__desc">Red, white and black horizontal bands with two green stars.</p>
+            <p class="card__note">The image shows the flag used until December 2024.</p>
+          </article>
+        </li>
+        <li class="card" id="jordan" data-name="Jordan">
+          <article>
+            <figure class="card__figure">
+              <img
+                src="img/jordan.jpg"
+                alt="Flag of Jordan"
+                width="710"
+                height="532"
+                loading="lazy" decoding="async"
+              />
+            </figure>
+            <header class="card__head">
+              <h2 class="card__name">Jordan</h2>
+              <p class="card__name-ar" lang="ar" dir="rtl">الأردن</p>
+            </header>
+            <p class="card__desc">Black, white and green horizontal bands with a red triangle at the hoist holding a white seven-pointed star.</p>
+          </article>
+        </li>
+        <li class="card" id="iraq" data-name="Iraq">
+          <article>
+            <figure class="card__figure">
+              <img
+                src="img/iraq.jpg"
+                alt="Flag of Iraq"
+                width="1023"
+                height="692"
+                loading="lazy" decoding="async"
+              />
+            </figure>
+            <header class="card__head">
+              <h2 class="card__name">Iraq</h2>
+              <p class="card__name-ar" lang="ar" dir="rtl">العراق</p>
+            </header>
+            <p class="card__desc">Red, white and black horizontal bands with the green Arabic phrase Allahu Akbar on the white band.</p>
+          </article>
+        </li>
+      </ul>
+    </main>
+
+    <footer class="wrap footer">
+      <p>Flag images are included in the repository under <code>img/</code>.</p>
+    </footer>
 
     <script src="main.js"></script>
   </body>
